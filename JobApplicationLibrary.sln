@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobApplicationLibrary", "JobApplicationLibrary\JobApplicationLibrary.csproj", "{5CD16CC4-A728-479F-88CD-D2A42077B60B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobApplicationLibrary.UnitTest", "JobApplicationLibrary.UnitTest\JobApplicationLibrary.UnitTest.csproj", "{DB64FA4C-97F1-4305-A4AB-21D5DE577DD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CD16CC4-A728-479F-88CD-D2A42077B60B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD16CC4-A728-479F-88CD-D2A42077B60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD16CC4-A728-479F-88CD-D2A42077B60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD16CC4-A728-479F-88CD-D2A42077B60B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB64FA4C-97F1-4305-A4AB-21D5DE577DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB64FA4C-97F1-4305-A4AB-21D5DE577DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB64FA4C-97F1-4305-A4AB-21D5DE577DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB64FA4C-97F1-4305-A4AB-21D5DE577DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
