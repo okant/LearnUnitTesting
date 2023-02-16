@@ -6,4 +6,7 @@ public class IdentityValidator : IIdentityValidator
     {
         return true;
     }
+
+    public ICountryDataProvider CountryDataProvider { get; }
+    public ValidationMode ValidationMode { get; set; }
 }

@@ -14,10 +14,16 @@ public class ApplicationEvaluator
     {
         _identityValidator = identityValidator;
     }
-    
+
     public ApplicationResult Evaluate(JobApplication form)
     {
-        if(form.Applicant.Age < MinAge) return ApplicationResult.AutoRejected;
+        if (form.Applicant is null) throw new ArgumentNullException();
+        if (form.Applicant.Age < MinAge) return ApplicationResult.AutoRejected;
+
+        _identityValidator.ValidationMode = form.Applicant.Age > 50 ? ValidationMode.Detailed : ValidationMode.Quick;
+
+        if (_identityValidator.CountryDataProvider.CountryData.Country != "Turkey")
+            return ApplicationResult.TransferredToCTO;
 
         var validIdentity = _identityValidator.IsValid(form.Applicant.IdentityNumber);
 
@@ -36,7 +42,7 @@ public class ApplicationEvaluator
     private int GetTechStackSimilarityRate(IEnumerable<string> applicantTechStack)
     {
         var matchedCount = applicantTechStack.Count(s => techStackList.Contains(s, StringComparer.OrdinalIgnoreCase));
-        return (int)((double) matchedCount / techStackList.Count) * 100;
+        return (int)((double)matchedCount / techStackList.Count) * 100;
     }
 }
 
